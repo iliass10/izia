@@ -1,9 +1,13 @@
-<html>
-  <head>
-    <title>Page new</title>
-  </head>
+<%= simple_form_for(@result) do |f| %>
 
-  <body>
-    <h1>Page new</h1>
-  </body>
-</html>
+
+  <%= f.input :value %>
+
+  <%= f.label :metric_id %>
+  <%= f.text_field :value %>
+
+  <%= f.label :metric_id %>
+  <%= f.text_field :value %>
+
+  <%= f.submit %>
+<% end %>
