@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class ResultsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get show" do
+    get results_show_url
+    assert_response :success
+  end
 end
