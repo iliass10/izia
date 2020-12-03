@@ -5,5 +5,4 @@ class ResultsControllerTest < ActionDispatch::IntegrationTest
     get results_show_url
     assert_response :success
   end
-
 end
