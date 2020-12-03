@@ -1,0 +1,19 @@
+<h1>Page appointment</h1>
+
+<%= simple_form_for @appointment do |f| %>
+  <%= f.input :datetime, label: false %>
+  <%= f.simple_fields_for :results do |ff| %>
+    <%= ff.object.metric.name %>
+    <%= ff.input :metric_id, as: :hidden %>
+    <%= ff.input :value, label: false %>
+  <% end %>
+<% end %>
+
+
+
+
+
+
+
+
+
