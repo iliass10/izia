@@ -1,0 +1,29 @@
+<div class="header__image">
+    <div class="header__title">
+        <h1>Mes résultats</h1>
+    </div>
+</div>
+
+
+<div>
+  <% @results.each do |result| %>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title"><%= result.appointment.test.name %></h5>
+                </div>
+                <div class="col">
+                  <h6 class="card-subtitle mb-2 text-muted"><%= result.appointment.datetime %></h6>
+                </div>
+              </div>
+              <p class="card-text"><%= result.appointment.test.description %></p>
+              <%= link_to "En savoir plus", result_path(result), class: "card-link" %>
+            </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
