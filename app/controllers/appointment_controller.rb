@@ -11,6 +11,14 @@ class AppointmentController < ApplicationController
     redirect_to result_path(@appointment)
   end
 
+  def index
+    @appointments = Appointment.all
+  end
+
+  def show
+    @appointment = Appointment.find(params[:id])
+  end
+
   private
 
   def result_params

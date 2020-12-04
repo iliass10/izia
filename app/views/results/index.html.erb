@@ -1,0 +1,19 @@
+<div class="header__image">
+    <div class="header__title">
+        <h1>test</h1>
+    </div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+  <% @results.each do |result| %>
+  <div class="card-body">
+
+    <h5 class="card-title"><%= result.appointment.test.name %></h5>
+    <p><%= result.appointment.test.created_at %></p>
+    <p class="card-text"><%= result.appointment.test.description %></p>
+    <a href="results/show" class="card-link">En savoir plus</a>
+  </div>
+  <% end %>
+</div>
+
