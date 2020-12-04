@@ -104,10 +104,6 @@ margin-bottom: 200px;
     padding: 10px 0 10px 10px;
 }
 
-.result-recomandation {
-
-}
-
 .bloc-result {
     display: flex;
     align-items: center;
@@ -116,8 +112,8 @@ margin-bottom: 200px;
 }
 
 .title-result {
-font-size: large;
-font-weight: bolder;
+    font-size: large;
+    font-weight: bolder;
 }
 
 .log1 {
@@ -148,10 +144,10 @@ font-weight: bolder;
     border-radius: 20%;
 }
 
-    height: 90vh;
-    margin: 20px 20px 20px 20px;
-    background-color: blue;
-}
+    // height: 90vh;
+    // margin: 20px 20px 20px 20px;
+    // background-color: blue;
+
 
 .card-trip {
   overflow: hidden;
