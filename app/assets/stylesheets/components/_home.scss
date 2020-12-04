@@ -1,0 +1,49 @@
+.background {
+    background-image: asset-url('izia_chemin.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    // filter: brightness(80%);
+}
+
+.background-opacity {
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+.title {
+    color: #F7ECE1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    text-align: center;
+    font-style: bold;
+}
+
+.begin {
+    position: absolute;
+    top: 75%;
+    left: 32%;
+}
+
+.home-navbar-lewagon {
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    position: absolute;
+  }
+  
+  
+  .home-navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+  }
+  
+  .home-navbar-lewagon .navbar-brand img {
+    width: 40px;
+  }
+  
+  h1 {
+    color: #F7ECE1;
+  }
