@@ -147,3 +147,30 @@ font-weight: bolder;
     background-color: #f77b7b;
     border-radius: 20%;
 }
+
+    height: 90vh;
+    margin: 20px 20px 20px 20px;
+    background-color: blue;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  margin-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
