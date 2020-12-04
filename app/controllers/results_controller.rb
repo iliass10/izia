@@ -1,9 +1,12 @@
 class ResultsController < ApplicationController
 
+  def index
+    
+  end
+  
+
   def show
     @result = Result.find(params[:id])
-<<<<<<< HEAD
-=======
   end
   
   def new
@@ -21,6 +24,5 @@ class ResultsController < ApplicationController
 
   def result_params
     params.require(:result).permit(:metrics_id, :appointments_id, :value)
->>>>>>> 03d1078179c773fe2aa3b4178026fbc48d7ffaa9
   end
 end

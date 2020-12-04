@@ -1,11 +1,49 @@
 <div class="header__image">
-    <div class="header__title">
-    <h1>Prise de sang</h1>
-    <h2>22/11/2020</h2>
+    <div class="header-opacity">
+        <div class="header__title">
+            <h1>Prise de sang</h1>
+            <h2>22/11/2020</h2>
+        </div>
     </div>
 </div>
 <div class="container-show">
     <div class="data-show">
-        <p>test</p>
+        <h2>Taux d'hémoglobine</h2>
+        <div class="taux">
+            <p class="data-hemo">3,4</p>
+            <p class="type-hemo">g/dl</p>
+        </div>
+        <div class="graph">
+            <div class= "dark rec1"></div>
+            <div class= "green rec2"></div>
+            <div class= "grey rec3"></div>
+        </div>
+        <div class="dots">
+            <div class= "dot dark"></div>
+            <div class= "dot green"></div>
+            <div class= "dot grey"></div>
+        </div>
+        <div class="dots-title">
+            <div>Résultat</div>
+            <div>Moyenne</div>
+            <div>Total</div>
+        </div>
+        <div class="recomandation">Notre recomandation :</div>
+        <div class="result-recomandation">
+            <div class="bloc-result"><div class="title-result">Pratique sportive</div><div class="log1"><%= icon('fas', 'check') %></div></div>
+            <div class="bloc-result"><div class="title-result">Equilibre alimentaire</div><div class="log2"><%= icon('fas', 'arrow-up') %></div></div>
+            <div class="bloc-result"><div class="title-result">Gain / Perte de poids</div><div class="log3"><%= icon('fas', 'arrow-down') %></div></div>
+            <div class="bloc-result"><div class="title-result">Consommation d'alcool</div><div class="log4"><%= icon('fas', 'arrow-down') %></div></div>
+        </div>
+    </div>
+
+    <div class="data-show">
+        <h2>Calcium</h2>
+        <a href="#">En savoir plus</a>
+    </div>
+
+    <div class="data-show">
+        <h2>Fer</h2>
+        <a href="#">En savoir plus</a>
     </div>
 </div>
