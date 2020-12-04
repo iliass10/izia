@@ -40,6 +40,13 @@
   </div>
 
   <div class="begin">
-    <%= link_to "Commencer", new_appointment_path, class: "btn btn-light" %>
+
+    <% if @user = true %>
+    <%= link_to "Commencer", results_path, class: "btn btn-light" %>
+    <% else  %>
+    <%= link_to "Commencer", user_session_path, class: "btn btn-light" %>
+    <% end %>
   </div>
+
 </div>
+

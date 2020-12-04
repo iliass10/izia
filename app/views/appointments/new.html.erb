@@ -1,6 +1,11 @@
 <div class="header__image">
-    <div class="header__title">Entrez vos données</div>
+  <div class="header-opacity">
+    <div class="header__title">
+      <h1>Entrez vos résultats</h1>
+    </div>
+  </div>
 </div>
+
 <div class="col">
   <div class="card" style=" margin-top: 20px; padding-bottom: 20px">
     <%= simple_form_for @appointment do |f| %>
@@ -17,7 +22,7 @@
         </div>
       </div>
     <% end %>
-    <button type="button" class="btn btn-primary" result_path(result)>Confirmer</button>
+    <%= link_to "confirmer", results_path, class: "btn btn-light" %>
   </div>
 </div>
 
