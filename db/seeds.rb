@@ -7,9 +7,9 @@
 # #   Character.create(name: 'Luke', movie: movies.first)
 
 Result.destroy_all
-Appointment.destroy_all
 Metric.destroy_all
 Test.destroy_all
+Appointment.destroy_all
 User.destroy_all
 
 puts "------> Create users"
