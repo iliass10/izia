@@ -1,5 +1,10 @@
 class ResultsController < ApplicationController
 
+  def index
+    
+  end
+  
+
   def show
     @result = Result.find(params[:id])
   end
