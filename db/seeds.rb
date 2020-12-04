@@ -21,9 +21,6 @@ bruno = User.create!(email: "bruno@lewagon.org", password: "123456", password_co
 puts "------> Create tests"
 blood = Test.create!(name: "Test sanguin", description: "Un bilan sanguin permet de mesurer votre taux d'hémoglobine, de calcium et de fer.")
 
-puts "------> Create tests"
-blood = Test.create!(name: "Test sanguin", description: "Un bilan sanguin permet de mesurer votre taux d'hémoglobine, de calcium et de fer.")
-
 puts "------> Define metrics"
 hb = Metric.create!(name: "Taux de hemoglobine", test: blood)
 calcium = Metric.create!(name: "Taux de calcium", test: blood)
