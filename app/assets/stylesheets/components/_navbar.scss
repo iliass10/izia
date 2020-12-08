@@ -1,3 +1,5 @@
+// Navbar Home (Iliass)
+
 .navbar-lewagon {
   justify-content: space-between;
   background: transparent;
@@ -14,4 +16,38 @@
 .navbar-toggler-icon {
   font-weight: bold;
   font-size: 23px;
+}
+
+
+// Navbar bas (Adem)
+
+.navbar-bottom {
+  background-color: #E4962E;
+  height: 55px;
+}
+
+.navbar-bottom-style {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-background-logo {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  background-color: #966030;
+  margin-right: 80px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph-logo {
+  margin-left: 35px;
+}
+
+.color-logo i.fas.fa-chart-bar,
+.color-logo i.fas.fa-plus,
+.color-logo i.fas.fa-sign-out-alt{
+  color: black;
 }
