@@ -1,4 +1,4 @@
-<!-- <div class="header__image">
+<div class="header__image">
   <div class="header-opacity">
     <div class="header__title">
       <h1>Mes Résultats</h1>
@@ -19,7 +19,7 @@
                   <h5 class="card-title"><%= appointment.test.name%></h5>
                 </div>
               </div>
-                <%= link_to "En savoir plus", result_path(), class: "card-link" %>
+                <%= link_to "En savoir plus", appointment_path(appointment), class: "card-link" %>
             </div>
       </div>
         <% end %>
@@ -27,4 +27,3 @@
 </div>
 
 
- -->
