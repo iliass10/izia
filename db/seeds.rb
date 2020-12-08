@@ -1,16 +1,9 @@
-# # This file should contain all the record creation needed to seed the database with its default values.
-# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-# #
-# # Examples:
-# #
-# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-# #   Character.create(name: 'Luke', movie: movies.first)
-
-Result.destroy_all
-Metric.destroy_all
+puts "------> Clean database"
 Test.destroy_all
-Appointment.destroy_all
+Metric.destroy_all
 User.destroy_all
+Appointment.destroy_all
+Result.destroy_all
 
 puts "------> Create users"
 thomas = User.create!(email: "thomas@lewagon.org", password: "123456", password_confirmation: "123456")
@@ -31,7 +24,6 @@ puts "------> Create some appointments... "
 a1 = Appointment.create!(user: thomas, test:blood, datetime: Time.zone.now)
 a2 = Appointment.create!(user: thomas, test:blood, datetime: "2019-10-19 10:00")
 a3 = Appointment.create!(user: thomas, test:blood, datetime: "2018-07-17 15:23")
-
 
 puts "------> Let's set the results "
 Result.create!(appointment:a1, metric: glycemie, value: 0.7)
