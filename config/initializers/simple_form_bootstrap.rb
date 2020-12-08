@@ -117,7 +117,7 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
     b.use :label
-    b.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
+    b.wrapper tag: 'div', class: 'd-flex flex-column justify-content-between align-items-center' do |ba|
       ba.use :input, class: 'form-control mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
     end
     b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
