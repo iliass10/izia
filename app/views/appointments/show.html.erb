@@ -6,7 +6,6 @@
     </div>
   </div>
 </div>
-
 <div class="container-show">
   <div class="data-show">
     <h2>Notre recomandation</h2>
@@ -17,92 +16,96 @@
       <div class="bloc-result"><div class="title-result">Consommation d'alcool</div><div class="log4"><%= icon('fas', 'arrow-down') %></div></div>
     </div>
   </div>
-  <div class="data-show">
-    <h2>Glycémie</h2>
-    <div class="taux">
-        <p class="data-hemo">3,4</p>
+  <% @appointment.results.each do |result| %>
+    <div class="data-show">
+      <h2><%= result.metric.name %></h2>
+      <div class="taux">
+        <p class="data-hemo"><%= result.value %></p>
         <p class="type-hemo">g/dl</p>
+      </div>
     </div>
-    <div class="graph">
-        <div class= "dark rec1"></div>
-        <div class= "green rec2"></div>
-        <div class= "grey rec3"></div>
-    </div>
-    <div class="dots">
-        <div class= "dot dark"></div>
-        <div class= "dot green"></div>
-        <div class= "dot grey"></div>
-    </div>
-    <div class="dots-title">
-        <div>Résultat</div>
-        <div>Moyenne</div>
-        <div>Total</div>
-    </div>
-  </div>
-  <div class="data-show">
-    <h2>Cholestérol</h2>
-    <div class="taux">
-      <p class="data-hemo">2,9</p>
-      <p class="type-hemo">g/dl</p>
-    </div>
-    <div class="graph">
-      <div class= "dark rec1"></div>
-      <div class= "green rec2"></div>
-      <div class= "grey rec3"></div>
-    </div>
-    <div class="dots">
-      <div class= "dot dark"></div>
-      <div class= "dot green"></div>
-      <div class= "dot grey"></div>
-    </div>
-    <div class="dots-title">
-      <div>Résultat</div>
-      <div>Moyenne</div>
-      <div>Total</div>
-    </div>
-  </div>
-  <div class="data-show">
-    <h2>Transaminases</h2>
-    <div class="taux">
-      <p class="data-hemo">2,9</p>
-      <p class="type-hemo">g/dl</p>
-    </div>
-    <div class="graph">
-      <div class= "dark rec1"></div>
-      <div class= "green rec2"></div>
-      <div class= "grey rec3"></div>
-    </div>
-    <div class="dots">
-      <div class= "dot dark"></div>
-      <div class= "dot green"></div>
-      <div class= "dot grey"></div>
-    </div>
-    <div class="dots-title">
-      <div>Résultat</div>
-      <div>Moyenne</div>
-      <div>Total</div>
-    </div>
-  </div>
-  <div class="data-show">
-    <h2>Créatinine sanguine</h2>
-    <div class="taux">
-      <p class="data-hemo">2,9</p>
-      <p class="type-hemo">g/dl</p>
-    </div>
-    <div class="graph">
-      <div class= "dark rec1"></div>
-      <div class= "green rec2"></div>
-      <div class= "grey rec3"></div>
-    </div>
-    <div class="dots">
-      <div class= "dot dark"></div>
-      <div class= "dot green"></div>
-      <div class= "dot grey"></div>
-    </div>
-    <div class="dots-title">
-      <div>Résultat</div>
-      <div>Moyenne</div>
-      <div>Total</div>
-    </div>
-  </div>
+  <% end %>
 </div>
+<!--     <div class="graph"> -->
+<!--         <div class= "dark rec1"></div> -->
+<!--         <div class= "green rec2"></div> -->
+<!--         <div class= "grey rec3"></div> -->
+<!--     </div> -->
+<!--     <div class="dots"> -->
+<!--         <div class= "dot dark"></div> -->
+<!--         <div class= "dot green"></div> -->
+<!--         <div class= "dot grey"></div> -->
+<!--     </div> -->
+<!--     <div class="dots-title"> -->
+<!--         <div>Résultat</div> -->
+<!--         <div>Moyenne</div> -->
+<!--         <div>Total</div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="data-show"> -->
+<!--     <h2>Cholestérol</h2> -->
+<!--     <div class="taux"> -->
+<!--       <p class="data-hemo">2,9</p> -->
+<!--       <p class="type-hemo">g/dl</p> -->
+<!--     </div> -->
+<!--     <div class="graph"> -->
+<!--       <div class= "dark rec1"></div> -->
+<!--       <div class= "green rec2"></div> -->
+<!--       <div class= "grey rec3"></div> -->
+<!--     </div> -->
+<!--     <div class="dots"> -->
+<!--       <div class= "dot dark"></div> -->
+<!--       <div class= "dot green"></div> -->
+<!--       <div class= "dot grey"></div> -->
+<!--     </div> -->
+<!--     <div class="dots-title"> -->
+<!--       <div>Résultat</div> -->
+<!--       <div>Moyenne</div> -->
+<!--       <div>Total</div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="data-show"> -->
+<!--     <h2>Transaminases</h2> -->
+<!--     <div class="taux"> -->
+<!--       <p class="data-hemo">2,9</p> -->
+<!--       <p class="type-hemo">g/dl</p> -->
+<!--     </div> -->
+<!--     <div class="graph"> -->
+<!--       <div class= "dark rec1"></div> -->
+<!--       <div class= "green rec2"></div> -->
+<!--       <div class= "grey rec3"></div> -->
+<!--     </div> -->
+<!--     <div class="dots"> -->
+<!--       <div class= "dot dark"></div> -->
+<!--       <div class= "dot green"></div> -->
+<!--       <div class= "dot grey"></div> -->
+<!--     </div> -->
+<!--     <div class="dots-title"> -->
+<!--       <div>Résultat</div> -->
+<!--       <div>Moyenne</div> -->
+<!--       <div>Total</div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="data-show"> -->
+<!--     <h2>Créatinine sanguine</h2> -->
+<!--     <div class="taux"> -->
+<!--       <p class="data-hemo">2,9</p> -->
+<!--       <p class="type-hemo">g/dl</p> -->
+<!--     </div> -->
+<!--     <div class="graph"> -->
+<!--       <div class= "dark rec1"></div> -->
+<!--       <div class= "green rec2"></div> -->
+<!--       <div class= "grey rec3"></div> -->
+<!--     </div> -->
+<!--     <div class="dots"> -->
+<!--       <div class= "dot dark"></div> -->
+<!--       <div class= "dot green"></div> -->
+<!--       <div class= "dot grey"></div> -->
+<!--     </div> -->
+<!--     <div class="dots-title"> -->
+<!--       <div>Résultat</div> -->
+<!--       <div>Moyenne</div> -->
+<!--       <div>Total</div> -->
+<!--     </div> -->
+<!--   </div> -->
+
