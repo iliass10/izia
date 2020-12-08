@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+.logo-home {
+    padding: 40px 50px;
+}
+
+.logo-home > h1 {
+    background-color: #E4962E;
+    border-radius: 8px;
+    width: 105px;
+    color: #F7ECE1;
+    font-size: 3rem;
+    padding-left: 10px;
+}
