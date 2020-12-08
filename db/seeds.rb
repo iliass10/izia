@@ -22,23 +22,30 @@ puts "------> Create tests"
 blood = Test.create!(name: "Test sanguin", description: "Un bilan sanguin permet de mesurer votre taux d'hémoglobine, de calcium et de fer.")
 
 puts "------> Define metrics"
-hb = Metric.create!(name: "Taux de hemoglobine", test: blood)
-calcium = Metric.create!(name: "Taux de calcium", test: blood)
-iron = Metric.create!(name: "Taux de fer", test: blood)
+glycemie = Metric.create!(name: "Glycémie", test: blood)
+cholesterol = Metric.create!(name: "Cholestérol", test: blood)
+transaminases = Metric.create!(name: "Transaminases", test: blood)
+creatinine_sanguine = Metric.create!(name: "Créatinine sanguine", test: blood)
 
 puts "------> Create some appointments... "
 a1 = Appointment.create!(user: thomas, test:blood, datetime: Time.zone.now)
-a2 = Appointment.create!(user: adem, test:blood, datetime: Time.zone.yesterday)
-a3 = Appointment.create!(user: illias, test:blood, datetime: Time.zone.now)
+a2 = Appointment.create!(user: thomas, test:blood, datetime: "2019-10-19 10:00")
+a3 = Appointment.create!(user: thomas, test:blood, datetime: "2018-07-17 15:23")
 
 
 puts "------> Let's set the results "
-Result.create!(appointment:a1, metric: hb, value: 98)
-Result.create!(appointment:a1, metric: iron, value: 130)
-Result.create!(appointment:a1, metric: calcium, value: 40)
-Result.create!(appointment:a2, metric: hb, value: 98)
-Result.create!(appointment:a2, metric: iron, value: 130)
-Result.create!(appointment:a2, metric: calcium, value: 40)
-Result.create!(appointment:a3, metric: hb, value: 98)
-Result.create!(appointment:a3, metric: iron, value: 130)
-Result.create!(appointment:a3, metric: calcium, value: 40)
+Result.create!(appointment:a1, metric: glycemie, value: 0.7)
+Result.create!(appointment:a1, metric: cholesterol, value: 1.5)
+Result.create!(appointment:a1, metric: transaminases, value: 60)
+Result.create!(appointment:a1, metric: creatinine_sanguine, value: 90)
+
+Result.create!(appointment:a2, metric: glycemie, value: 1)
+Result.create!(appointment:a2, metric: cholesterol, value: 2.1)
+Result.create!(appointment:a2, metric: transaminases, value: 65)
+Result.create!(appointment:a2, metric: creatinine_sanguine, value: 95)
+
+Result.create!(appointment:a3, metric: glycemie, value: 1.2)
+Result.create!(appointment:a3, metric: cholesterol, value: 2.2)
+Result.create!(appointment:a3, metric: transaminases, value: 70)
+Result.create!(appointment:a3, metric: creatinine_sanguine, value: 100)
+
