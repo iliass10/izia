@@ -21,7 +21,7 @@
       <h2><%= result.metric.name %></h2>
       <div class="taux">
         <p class="data-hemo"><%= result.value %></p>
-        <p class="type-hemo">g/dl</p>
+        <p class="type-hemo"><%= result.metric.unit %></p>
       </div>
     </div>
   <% end %>
