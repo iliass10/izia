@@ -15,10 +15,10 @@ puts "------> Create tests"
 blood = Test.create!(name: "Test sanguin", description: "Un bilan sanguin permet de mesurer votre taux d'hémoglobine, de calcium et de fer.")
 
 puts "------> Define metrics"
-glycemie = Metric.create!(name: "Glycémie", test: blood)
-cholesterol = Metric.create!(name: "Cholestérol", test: blood)
-transaminases = Metric.create!(name: "Transaminases", test: blood)
-creatinine_sanguine = Metric.create!(name: "Créatinine sanguine", test: blood)
+glycemie = Metric.create!(name: "Glycémie", test: blood, unit: "g/L")
+cholesterol = Metric.create!(name: "Cholestérol", test: blood, unit: "g/L")
+transaminases = Metric.create!(name: "Transaminases", test: blood, unit: "UI/L")
+creatinine_sanguine = Metric.create!(name: "Créatinine sanguine", test: blood, unit: "μmol/l")
 
 puts "------> Create some appointments... "
 a1 = Appointment.create!(user: thomas, test:blood, datetime: Time.zone.now)
