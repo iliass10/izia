@@ -6,23 +6,23 @@
   </div>
 </div>
 
-<div class="col">
+<div class="col appointment-form-container">
   <div class="card" style=" margin-top: 20px; padding-bottom: 20px">
     <%= simple_form_for @appointment do |f| %>
       <div class="card-body">
         <div class="row">
-          <div class="col sm-12">
-            <%= f.input :datetime, label: "Date & heure du test" %>
+          <div class="col sm-12 calendar">
+            <%= f.input :datetime, label: "Date & heure du test", class: "datepicker" %>
             <%= f.simple_fields_for :results do |ff| %>
                <%= ff.object.metric.name %>
-               <%= ff.input :metric_id, as: :hidden %>
+               <%= ff.input :metric_id, as: :hidden, input_html: {class: "date"} %>
                <%= ff.input :value, label: false %>
             <% end %>
           </div>
         </div>
       </div>
     <% end %>
-    <%= link_to "confirmer", results_path, class: "btn btn-light" %>
+    <%= link_to "confirmer", appointments_path, class: "btn btn-warning" %>
   </div>
 </div>
 
