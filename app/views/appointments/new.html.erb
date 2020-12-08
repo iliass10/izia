@@ -11,11 +11,11 @@
     <%= simple_form_for @appointment do |f| %>
       <div class="card-body">
         <div class="row">
-          <div class="col sm-12">
-            <%= f.input :datetime, label: "Date & heure du test" %>
+          <div class="col sm-12 calendar">
+            <%= f.input :datetime, label: "Date & heure du test", class: "datepicker" %>
             <%= f.simple_fields_for :results do |ff| %>
                <%= ff.object.metric.name %>
-               <%= ff.input :metric_id, as: :hidden %>
+               <%= ff.input :metric_id, as: :hidden, input_html: {class: "date"} %>
                <%= ff.input :value, label: false %>
             <% end %>
           </div>
