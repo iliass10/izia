@@ -36,15 +36,15 @@
 
 <div>
   <div class="slogan">
-    <h1 class="title">Reprenez le chemin de votre santé</h1>
+    <h1 class="title">Maîtrisez vos analyses médicales</h1>
   </div>
 
   <div class="begin">
 
     <% if @user = true %>
-    <%= link_to "Commencer", new_appointment_path, class: "btn btn-light" %>
+    <%= link_to "Entrez vos données", new_appointment_path, class: "btn btn-light" %>
     <% else  %>
-    <%= link_to "Commencer", user_session_path, class: "btn btn-light" %>
+    <%= link_to "Entrez vos données", user_session_path, class: "btn btn-light" %>
     <% end %>
   </div>
 
