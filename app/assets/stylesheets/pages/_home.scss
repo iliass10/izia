@@ -1,13 +1,24 @@
 // Specific CSS for your home-page
 .logo-home {
     padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
 }
 
-.logo-home > h1 {
-    background-color: #E4962E;
-    border-radius: 8px;
-    width: 105px;
-    color: #F7ECE1;
-    font-size: 3rem;
-    padding-left: 10px;
+.logo {
+    text-align: center;
+}
+
+.logo > h1 {
+    background-color: white;
+    width: 57.5px;
+    color: #D97931;
+    font-size: 1rem;
+}
+
+.img-logo { 
+width: 57.5px;
+height: 57.5px;
+background-image: asset-url('logo_girafe_2.jpg');
+background-size: cover;
 }
