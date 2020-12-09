@@ -33,13 +33,13 @@ class AppointmentsController < ApplicationController
   def metrics_check(result)
     case result.metric.name
     when "Glycémie"
-      result.value > 1.1 ? "-" : "ok"
+      result.value > 1.1 ? 'arrow-down' : 'check'
     when "Cholestérol"
-      result.value > 2 ? "+" : "ok"
+      result.value > 2 ? 'arrow-up' : 'check'
     when "Transaminases"
-      result.value > 50 ? "-" : "ok"
+      result.value > 50 ? 'arrow-down' : 'check'
     when "Créatinine sanguine"
-      result.value > 110 ? "+" : "ok"
+      result.value > 110 ? 'arrow-up' : 'check'
     end
   end
 
