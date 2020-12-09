@@ -7,10 +7,10 @@
   </div>
 </div>
 
-<p>Pratique sportive: <%= @cholesterol_check %></p>
-<p>Consommation de sucre: <%= @glycemie_check %></p>
-<p>Consommation d'eau: <%= @creatinine_check %></p>
-<p>Gain / Perte de poids: <%= @transaminases_check %></p>
+<p>Pratique sportive <%= @appointment.results[1].value %> (< 2): <%= @cholesterol_check %></p>
+<p>Consommation de sucre <%= @appointment.results[0].value %> (< 1.1): <%= @glycemie_check %></p>
+<p>Consommation d'eau <%= @appointment.results[3].value %> (< 110): <%= @creatinine_check %></p>
+<p>Gain / Perte de poids <%= @appointment.results[2].value %> (< 50): <%= @transaminases_check %></p>
 
 <div class="container-show">
   <div class="data-show">
