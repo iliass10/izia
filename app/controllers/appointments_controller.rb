@@ -21,9 +21,27 @@ class AppointmentsController < ApplicationController
 
   def show
     @appointment = Appointment.find(params[:id])
+    results = @appointment.results
+    @glycemie_check = metrics_check(results[0])
+    @cholesterol_check = metrics_check(results[1])
+    @transaminases_check = metrics_check(results[2])
+    @creatinine_check = metrics_check(results[3])
   end
 
   private
+
+  def metrics_check(result)
+    case result.metric.name
+    when "Glycémie"
+      result.value > 1.1 ? "-" : "ok"
+    when "Cholestérol"
+      result.value > 2 ? "+" : "ok"
+    when "Transaminases"
+      result.value > 50 ? "-" : "ok"
+    when "Créatinine sanguine"
+      result.value > 110 ? "+" : "ok"
+    end
+  end
 
   def result_params
     params.require(:appointment).permit(:user_id, :test_id, :datetime, result_attributes: [:metric_id, :value])
