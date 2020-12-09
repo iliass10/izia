@@ -4,7 +4,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new
     @appointment.test = Test.find_by_name("Test sanguin")
     @appointment.test.metrics.each do |metric|
-      @appointment.results << Result.new(metric: metric)
+    @appointment.results << Result.new(metric: metric)
     end
   end
 
@@ -12,7 +12,7 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.new(result_params)
     @appointment.save
     #rajouter conditions si ça ne réussit pas
-    redirect_to result_path(@appointment)
+    redirect_to appointments_path(@appointment)
   end
 
   def index
