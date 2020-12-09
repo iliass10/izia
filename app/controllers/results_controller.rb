@@ -1,7 +1,7 @@
 class ResultsController < ApplicationController
 
   def index
-
+    @results = Result.all
   end
 
 
@@ -20,13 +20,9 @@ class ResultsController < ApplicationController
     redirect_to result_path(@result)
   end
 
-  def index
-    @results = Result.all
-  end
-
   private
 
   def result_params
-    params.require(:result).permit(:metrics_id, :appointments_id, :value)
+    params.require(:result).permit(:metric_id, :appointment_id, :value)
   end
 end
