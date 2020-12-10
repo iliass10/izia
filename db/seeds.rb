@@ -21,7 +21,7 @@ transaminases = Metric.create!(name: "Transaminases", test: blood, unit: "UI/L")
 creatinine_sanguine = Metric.create!(name: "Créatinine sanguine", test: blood, unit: "μmol/l")
 
 puts "------> Create some appointments... "
-a1 = Appointment.create!(user: thomas, test:blood, datetime: Time.zone.now)
+a1 = Appointment.create!(user: thomas, test:blood, datetime: "2020-03-02 17:12")
 a2 = Appointment.create!(user: thomas, test:blood, datetime: "2019-10-19 10:00")
 a3 = Appointment.create!(user: thomas, test:blood, datetime: "2018-07-17 15:23")
 
