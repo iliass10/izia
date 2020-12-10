@@ -28,8 +28,7 @@ class AppointmentsController < ApplicationController
   end
 
   def index
-    @appointments = Appointment.order('created_at DESC')
-    # @users = User.order('created_at DESC')
+    @appointments = Appointment.all.order('datetime DESC')
   end
 
   def show
