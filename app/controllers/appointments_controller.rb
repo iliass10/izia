@@ -1,18 +1,29 @@
 class AppointmentsController < ApplicationController
-
   def new
     @appointment = Appointment.new
     @appointment.test = Test.find_by_name("Test sanguin")
     @appointment.test.metrics.each do |metric|
-    @appointment.results << Result.new(metric: metric)
+      @appointment.results << Result.new(metric: metric)
     end
   end
 
   def create
     @appointment = Appointment.new(result_params)
-    @appointment.save
-    #rajouter conditions si ça ne réussit pas
-    redirect_to appointments_path(@appointment)
+    @appointment.user = current_user
+    @appointment.test = Test.find_by_name("Test sanguin")
+    if @appointment.save
+      result_glycemie = params[:appointment][:results_attributes]["0"]
+      Result.create!(appointment: @appointment, metric_id: result_glycemie[:metric_id], value: result_glycemie[:value].to_f)
+      result_cholesterol = params[:appointment][:results_attributes]["1"]
+      Result.create!(appointment: @appointment, metric_id: result_cholesterol[:metric_id], value: result_cholesterol[:value].to_f)
+      result_transaminases = params[:appointment][:results_attributes]["2"]
+      Result.create!(appointment: @appointment, metric_id: result_transaminases[:metric_id], value: result_transaminases[:value].to_f)
+      result_creatinine_sanguine = params[:appointment][:results_attributes]["3"]
+      Result.create!(appointment: @appointment, metric_id: result_creatinine_sanguine[:metric_id], value: result_creatinine_sanguine[:value].to_f)
+      redirect_to appointment_path(@appointment)
+    else
+      render "new"
+    end
   end
 
   def index
@@ -44,6 +55,7 @@ class AppointmentsController < ApplicationController
   end
 
   def result_params
-    params.require(:appointment).permit(:user_id, :test_id, :datetime, result_attributes: [:metric_id, :value])
+    params.require(:appointment).permit(:datetime)
+    #result_attributes: [:metric_id, :value]
   end
 end
