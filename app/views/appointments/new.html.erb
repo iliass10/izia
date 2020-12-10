@@ -11,17 +11,20 @@
     <%= simple_form_for @appointment do |f| %>
       <div class="card-body">
         <div class="row">
-          <div class="col sm-12 calendar">
-            <%= f.input :datetime, label: "Date & heure du test", class: "datepicker" %>
+          <div class="col sm-12 create">
+            <label for="example">Date & heure du test</label>
+            <input type="datetime-local" id="meeting-time" name="appointment[datetime]" 
+            value="2020-09-04T00:00" min="2020-09-02T00:00" max="2025-06-14T00:00" class="form-group form-control">
             <%= f.simple_fields_for :results do |ff| %>
-               <%= ff.object.metric.name %>
-               <%= ff.input :metric_id, as: :hidden, input_html: {class: "date"} %>
-               <%= ff.input :value, label: false %>
+              <%= ff.object.metric.name %>
+              <%= ff.input :metric_id, as: :hidden, input_html: {class: "date"} %>
+              <%= ff.input :value, label: false, placeholder: "Entrez ici votre taux en #{ff.object.metric.unit}" %>
             <% end %>
+            <%= f.submit "confirmer", class: "btn btn-warning" %>
           </div>
         </div>
       </div>
-      <%= f.submit "confirmer", class: "btn btn-warning" %>
+      
     <% end %>
     
   </div>
