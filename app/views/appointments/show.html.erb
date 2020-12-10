@@ -2,7 +2,7 @@
   <div class="header-opacity">
     <div class="header__title">
       <h1><%= @appointment.test.name %></h1>
-      <h2><%= @appointment.datetime.strftime("%d/%m/%Y") %></h2>
+      <h5><%= @appointment.datetime.strftime("%d/%m/%Y") %></h5>
     </div>
   </div>
 </div>
@@ -16,7 +16,10 @@
             <h5 class="card-title">Nos recommandations</h5>
             <div class="row">
               <div class="result-recomandation">
-                <div class="bloc-result"><div class="card-subtitle">Pratique sportive</div><div class="log1"><%= icon('fas', @cholesterol_check) %></div></div>
+                <div class="bloc-result">
+                  <div class="card-subtitle">Pratique sportive</div>
+                  <div class="log1"><%= icon('fas', @cholesterol_check) %></div>
+                </div>
                 <div class="bloc-result"><div class="card-subtitle">Consommation de sucre</div><div class="log2"><%= icon('fas', @glycemie_check) %></div></div>
                 <div class="bloc-result"><div class="card-subtitle">Consommation d'eau</div><div class="log2"><%= icon('fas', @creatinine_check) %></div></div>
                 <div class="bloc-result"><div class="card-subtitle">Gain / Perte de poids</div><div class="log3"><%= icon('fas', @transaminases_check) %></div></div>
