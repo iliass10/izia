@@ -28,7 +28,7 @@ class AppointmentsController < ApplicationController
   end
 
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.all.order(datetime: :desc)
   end
 
   def show
