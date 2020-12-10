@@ -1,6 +1,6 @@
 <div class="header__image">
   <div class="header-opacity">
-    <div class="header__title">
+    <div class="header__title v-center">
       <h1>Mes Résultats</h1>
     </div>
   </div>
@@ -11,17 +11,16 @@
     <% @appointments.each do |appointment| %>
       <div class="card">
         <div class="card-body">
-          <div class="row">
-            <div class="col">
-              <h5 class="card-title"><%= appointment.test.name %></h5>
-              <p class="card-subtitle"><%= appointment.datetime.strftime("%d/%m/%Y") %></p>
-              <%= link_to "Détails", appointment_path(appointment), class: "card-link" %>
-            </div>
+          <div class="card-logo-title">
+            <i class="fas fa-tint"></i>
+            <div class="card-title"><h3><%= appointment.test.name %></h3></div>
+          </div>
+          <div class="card-date-detail">
+            <p class="card-subtitle"><%= appointment.datetime.strftime("%d/%m/%Y") %></p>
+            <%= link_to "Détails", appointment_path(appointment), class: "btn btn-outline-warning mt-4" %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
-

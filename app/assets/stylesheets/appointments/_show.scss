@@ -37,12 +37,14 @@ margin-bottom: 200px;
 }
 
 .data-hemo {
-    color: blue;
-    font-size: 50px;
+    color: #E67E22;
+    font-size: 40px;
 }
 
 .type-hemo {
-    font-size: 30px;
+    color: #343a40;
+    font-size: 20px;
+    padding-left: 20px;
 }
 
 .graph {
@@ -116,34 +118,60 @@ margin-bottom: 200px;
     font-weight: bolder;
 }
 
+.fa-check {
+  width: 25px;
+  height: 25px;
+  border-radius: 20%;
+  margin-left: 10px;
+  padding-top: 3px;
+  background-color:#B4F4C4;
+}
+
+.fa-arrow-down {
+  width: 25px;
+  height: 25px;
+  border-radius: 20%;
+  margin-left: 10px;
+  padding-top: 3px;
+  background-color:#F77B7B;
+}
+
+.fa-arrow-up {
+  width: 25px;
+  height: 25px;
+  border-radius: 20%;
+  margin-left: 10px;
+  padding-top: 3px;
+  background-color: #94DDEF;
+}
+
 .log1 {
     width: 25px;
     height: 25px;
-    background-color: #B4F4C4;
     border-radius: 20%;
+    margin-left: 40px;
 }
 
 .log2 {
     width: 25px;
     height: 25px;
-    background-color: #94ddef;
     border-radius: 20%;
+    margin-left: 40px;
 }
 
 .log3 {
     width: 25px;
     height: 25px;
-    background-color: #f77b7b;
     border-radius: 20%;
+    margin-left: 40px;
 }
 
 .log4 {
     width: 25px;
     height: 25px;
-    background-color: #f77b7b;
     border-radius: 20%;
+    margin-left: 40px;
 }
-
 
 .card-trip {
   overflow: hidden;
@@ -170,3 +198,31 @@ margin-bottom: 200px;
   margin-bottom: 70px;
 }
 
+.card-logo-title {
+    display: flex;
+}
+
+.card-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card-date-detail > p {
+    font-size: 20px;
+}
+
+.fa-tint {
+    font-size: 30px;
+    color: #eb0e0e;
+}
+
+.v-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.btn-outline-warning {
+    color: #E4962E;
+}
