@@ -28,7 +28,8 @@ class AppointmentsController < ApplicationController
   end
 
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.order('created_at DESC')
+    # @users = User.order('created_at DESC')
   end
 
   def show
@@ -58,5 +59,11 @@ class AppointmentsController < ApplicationController
   def result_params
     params.require(:appointment).permit(:datetime, :results_attributes)
     #result_attributes: [:metric_id, :value]
+  end
+
+  def sort_by_date(dates, direction="ASC")
+    sorted = dates.sort
+    sorted.reverse! if direction == "DESC"
+    sorted
   end
 end
