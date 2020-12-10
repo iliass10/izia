@@ -198,3 +198,31 @@ margin-bottom: 200px;
   margin-bottom: 70px;
 }
 
+.card-logo-title {
+    display: flex;
+}
+
+.card-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card-date-detail > p {
+    font-size: 20px;
+}
+
+.fa-tint {
+    font-size: 30px;
+    color: #eb0e0e;
+}
+
+.v-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.btn-outline-warning {
+    color: #E4962E;
+}
