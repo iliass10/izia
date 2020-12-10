@@ -6,24 +6,22 @@
   </div>
 </div>
 
-
-<div>
-
-    <div class="col">
-          <% @appointments.each do |appointment| %>
-        <div class="card">
-
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title"><%= appointment.test.name%></h5>
-                </div>
-              </div>
-                <%= link_to "En savoir plus", appointment_path(appointment), class: "card-link" %>
+<div class="appointments-container">
+  <div class="col">
+    <% @appointments.each do |appointment| %>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <h5 class="card-title"><%= appointment.test.name %></h5>
+              <p class="card-subtitle"><%= appointment.datetime.strftime("%d/%m/%Y") %></p>
+              <%= link_to "Détails", appointment_path(appointment), class: "card-link" %>
             </div>
+          </div>
+        </div>
       </div>
-        <% end %>
-    </div>
+    <% end %>
+  </div>
 </div>
 
 

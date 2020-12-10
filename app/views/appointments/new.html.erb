@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<div class="col">
+<div class="col appointment-form-container">
   <div class="card" style=" margin-top: 20px; padding-bottom: 20px">
     <%= simple_form_for @appointment do |f| %>
       <div class="card-body">
@@ -21,8 +21,9 @@
           </div>
         </div>
       </div>
+      <%= f.submit "confirmer", class: "btn btn-warning" %>
     <% end %>
-    <%= link_to "confirmer", appointments_path, class: "btn btn-light" %>
+    
   </div>
 </div>
 
