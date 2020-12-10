@@ -13,13 +13,13 @@
       <div class="card-body">
         <div class="row">
           <div class="col">
-            <h2>Notre recomandation</h2>
+            <h5 class="card-title">Nos recommandations</h5>
             <div class="row">
               <div class="result-recomandation">
-                <div class="bloc-result"><div class="card-title">Pratique sportive</div><div class="log1"><%= icon('fas', @cholesterol_check) %></div></div>
-                <div class="bloc-result"><div class="card-title">Consommation de sucre</div><div class="log2"><%= icon('fas', @glycemie_check) %></div></div>
-                <div class="bloc-result"><div class="card-title">Consommation d'eau</div><div class="log2"><%= icon('fas', @creatinine_check) %></div></div>
-                <div class="bloc-result"><div class="card-title">Gain / Perte de poids</div><div class="log3"><%= icon('fas', @transaminases_check) %></div></div>
+                <div class="bloc-result"><div class="card-subtitle">Pratique sportive</div><div class="log1"><%= icon('fas', @cholesterol_check) %></div></div>
+                <div class="bloc-result"><div class="card-subtitle">Consommation de sucre</div><div class="log2"><%= icon('fas', @glycemie_check) %></div></div>
+                <div class="bloc-result"><div class="card-subtitle">Consommation d'eau</div><div class="log2"><%= icon('fas', @creatinine_check) %></div></div>
+                <div class="bloc-result"><div class="card-subtitle">Gain / Perte de poids</div><div class="log3"><%= icon('fas', @transaminases_check) %></div></div>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col">
-              <h2><%= result.metric.name %></h2>
+              <h5 class="card-title"><%= result.metric.name %></h5>
               <div class="taux">
                 <p class="data-hemo"><%= result.value %></p>
                 <p class="type-hemo"><%= result.metric.unit %></p>
