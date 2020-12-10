@@ -8,6 +8,7 @@ class AppointmentsController < ApplicationController
   end
 
   def create
+    # raise
     @appointment = Appointment.new(result_params)
     @appointment.user = current_user
     @appointment.test = Test.find_by_name("Test sanguin")
@@ -55,7 +56,7 @@ class AppointmentsController < ApplicationController
   end
 
   def result_params
-    params.require(:appointment).permit(:datetime)
+    params.require(:appointment).permit(:datetime, :results_attributes)
     #result_attributes: [:metric_id, :value]
   end
 end
