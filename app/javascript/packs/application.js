@@ -8,7 +8,6 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -25,9 +24,13 @@ require("channels")
 // External imports
 import "bootstrap";
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { createChart } from '../components/chart';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  createChart("Glycémie", 0.1, 0.5, 1.1, 1.8);
+  createChart("Cholestérol", 0.1, 1, 2, 4);
+  createChart("Transaminases", 1, 5, 50, 100);
+  createChart("Créatinine sanguine", 50, 80, 110, 140);
 });
