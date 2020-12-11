@@ -39,7 +39,7 @@
                 <p class="data-hemo"><%= result.value %></p>
                 <p class="type-hemo"><%= result.metric.unit %></p>
               </div>
-
+              <div id="<%= result.metric.name %>" data-taux="<%= result.value.to_json %>"></div>
             </div>
           </div>
         </div>
