@@ -13,14 +13,14 @@ const createChart = (metric, low, q1, q3, high) => {
 
     // create a box series and set the data
     var series = chart.box(data);
-    series.normal().medianStroke("#dd2c00", 2, "10 5", "round");
+    series.normal().medianStroke("#E4962E", 2, "10 5", "round");
+
 
     // set the chart title
     //chart.title("Vertical Box Chart");
 
     chart.xAxis(false);
-
-
+    chart.background(false)
 
     // set the container id
     chart.container(metric);
