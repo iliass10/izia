@@ -14,6 +14,8 @@ const createChart = (metric, low, q1, q3, high) => {
     // create a box series and set the data
     var series = chart.box(data);
     series.normal().medianStroke("#E4962E", 2, "10 5", "round");
+    series.normal().fill("#B4F4C4", 0.7);
+    series.normal().stroke("#B4F4C4", 0.3);
 
 
     // set the chart title
